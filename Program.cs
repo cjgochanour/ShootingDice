@@ -103,6 +103,14 @@ namespace ShootingDice
             goodLuckPlayer.Play(smackTalker);
             Console.WriteLine("-------------------");
 
+            //create a new player that only rolls 4 or higher and is a sore loser, have them play the other upper half player
+
+            Player ronald = new SoreLoserUpperHalfPlayer();
+            ronald.Name = "Ronald";
+
+            ronald.Play(goodLuckPlayer);
+            Console.WriteLine("-------------------");
+
             //create a list of players composed of the players we created
 
             List<Player> players = new List<Player>()
@@ -116,7 +124,8 @@ namespace ShootingDice
                 human,
                 bigMouth,
                 rageQuitter,
-                goodLuckPlayer
+                goodLuckPlayer,
+                ronald
             };
 
             //all players play against each other randomly
