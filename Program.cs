@@ -96,6 +96,13 @@ namespace ShootingDice
             }
             Console.WriteLine("-------------------");
 
+            //add a player who can only roll higher than 3 and have them play the smack talker
+            Player goodLuckPlayer = new UpperHalfPlayer();
+            goodLuckPlayer.Name = "Lucky Lucy";
+
+            goodLuckPlayer.Play(smackTalker);
+            Console.WriteLine("-------------------");
+
             //create a list of players composed of the players we created
 
             List<Player> players = new List<Player>()
@@ -108,7 +115,8 @@ namespace ShootingDice
                 pumpkinEater,
                 human,
                 bigMouth,
-                rageQuitter
+                rageQuitter,
+                goodLuckPlayer
             };
 
             //all players play against each other randomly
