@@ -2,8 +2,10 @@ using System;
 
 namespace ShootingDice
 {
+    //this is the main parent class for a player
     public class Player
     {
+        //Players have a name (must be assigned manually once player created) and dice size (default 6)
         public string Name { get; set; }
         public int DiceSize { get; set; } = 6;
 
@@ -15,7 +17,7 @@ namespace ShootingDice
 
         public virtual void Play(Player other)
         {
-            // Call roll for "this" object and for the "other" object
+            // Call roll for "this" Player and for the "other" Player (represents opponent)
             int myRoll = Roll();
             int otherRoll = other.Roll();
 
