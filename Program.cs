@@ -80,10 +80,35 @@ namespace ShootingDice
             bigMouth.Play(player1);
             Console.WriteLine("-------------------");
 
+            //add a sore loser and have them play player 3.
+
+            Player rageQuitter = new SoreLoserPlayer();
+            rageQuitter.Name = "Bill O'Reilly";
+
+            try
+            {
+                rageQuitter.Play(player3);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                Console.WriteLine("Right... well... moving on...");
+            }
+            Console.WriteLine("-------------------");
+
             //create a list of players composed of the players we created
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker, pumpkinEater, human, bigMouth
+            List<Player> players = new List<Player>()
+            {
+                player1,
+                player2,
+                player3,
+                large,
+                smackTalker,
+                pumpkinEater,
+                human,
+                bigMouth,
+                rageQuitter
             };
 
             //all players play against each other randomly
