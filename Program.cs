@@ -44,10 +44,19 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            //add smack talking player and have them play player2
+
+            Player smackTalker = new SmackTalkingPlayer();
+            smackTalker.Name = "Jimmy Jameson";
+
+            smackTalker.Play(player2);
+
+            Console.WriteLine("-------------------");
+
             //create a list of players composed of the players we created
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, smackTalker
             };
 
             //all players play against each other randomly
