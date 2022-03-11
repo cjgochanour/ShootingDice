@@ -63,10 +63,18 @@ namespace ShootingDice
             pumpkinEater.Play(large);
             Console.WriteLine("-------------------");
 
+            //create a new human player - ask user for their name - have them play player 2
+
+            Player human = new HumanPlayer();
+            Console.WriteLine("Please enter your name: ");
+            human.Name = Console.ReadLine();
+
+            human.Play(player2);
+
             //create a list of players composed of the players we created
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker
+                player1, player2, player3, large, smackTalker, pumpkinEater, human
             };
 
             //all players play against each other randomly
