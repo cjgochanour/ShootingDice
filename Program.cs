@@ -53,6 +53,16 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            //add OneHigherPlayer and have them play player3 and large dice player
+
+            Player pumpkinEater = new OneHigherPlayer();
+            pumpkinEater.Name = "Chris Cheatsworth";
+
+            pumpkinEater.Play(player3);
+            Console.WriteLine("-------------------");
+            pumpkinEater.Play(large);
+            Console.WriteLine("-------------------");
+
             //create a list of players composed of the players we created
 
             List<Player> players = new List<Player>() {
