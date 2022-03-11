@@ -8,33 +8,49 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+            //create two new players
+
             Player player1 = new Player();
             player1.Name = "Bob";
 
             Player player2 = new Player();
             player2.Name = "Sue";
 
+            //player 2 plays player 1
+
             player2.Play(player1);
 
             Console.WriteLine("-------------------");
 
+            //add another player
+
             Player player3 = new Player();
             player3.Name = "Wilma";
+
+            //new player plays player 2
 
             player3.Play(player2);
 
             Console.WriteLine("-------------------");
 
+            //add a large dice player
+
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
+
+            //player 1 plays against new large dice player 
 
             player1.Play(large);
 
             Console.WriteLine("-------------------");
 
+            //create a list of players composed of the players we created
+
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large
             };
+
+            //all players play against each other randomly
 
             PlayMany(players);
         }
