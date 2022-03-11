@@ -70,11 +70,20 @@ namespace ShootingDice
             human.Name = Console.ReadLine();
 
             human.Play(player2);
+            Console.WriteLine("-------------------");
+
+            //create a new Creative Smack Talker and have them play player 1
+
+            Player bigMouth = new CreativeSmackTalkingPlayer();
+            bigMouth.Name = "Tim Talksalot";
+
+            bigMouth.Play(player1);
+            Console.WriteLine("-------------------");
 
             //create a list of players composed of the players we created
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker, pumpkinEater, human
+                player1, player2, player3, large, smackTalker, pumpkinEater, human, bigMouth
             };
 
             //all players play against each other randomly
